@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+if ! type brew > /dev/null; then
+    /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+HOMEBREW_NO_AUTO_UPDATE=1 brew install fish gum
+
