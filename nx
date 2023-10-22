@@ -2,6 +2,7 @@
 
 FILE=$1
 SHELL=$2
+EDITOR=nvim
 
 if [ -v $FILE ]; then
     echo "File name was not specified"
@@ -25,4 +26,6 @@ if [ ! -f "$FILE" ]; then
 else
     echo "File already exists"
 fi
+
+$EDITOR $FILE
 

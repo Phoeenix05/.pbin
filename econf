@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+set CONF_PATH "/Users/antonfredriksson/.dotfiles"
+set EDITOR "/usr/bin/env" "nvim"
+
+exec $EDITOR $CONF_PATH
+
