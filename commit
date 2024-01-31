@@ -1,8 +1,0 @@
-#!/usr/bin/env zsh
-
-git add .
-TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
-SUMMARY=$(gum input --width 50 --placeholder "Summary of changes")
-DETAILS=$(gum write --width 80 --placeholder "Details of changes (CTRL+D to finish)")
-git commit -m "$TYPE: $SUMMARY" -m $DETAILS
-gum confirm "Push changes" && git push origin main

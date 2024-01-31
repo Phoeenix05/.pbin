@@ -1,8 +1,0 @@
-#!/usr/bin/env fish
-
-# set mode $(gum choose "--app" "--formulae")
-set query $(gum input --placeholder="app name") &&
-set chosen $(brew search $query --cask | gum filter) &&
-brew info $chosen &&
-gum confirm && brew install $chosen
-

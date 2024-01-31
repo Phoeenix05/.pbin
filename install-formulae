@@ -1,7 +1,0 @@
-#!/usr/bin/env fish
-
-set query $(gum input --placeholder="formulae name") &&
-set chosen $(brew search $query --formulae | gum filter) &&
-brew info $chosen &&
-gum confirm && brew install $chosen
-

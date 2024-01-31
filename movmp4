@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-IN=$(gum filter --indicator=">" --selected-prefix=" [x] " --unselected-prefix=" [ ] ")
-OUT=$(gum input --header="Output file name (.mp4 is added automatically)" --placeholder="output").mp4
-echo $IN $OUT
-ffmpeg -i $IN -q:v 0 $OUT
-

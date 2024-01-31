@@ -1,1 +1,5 @@
-gorg
+# system
+.DS_Store
+
+# rust
+target/
