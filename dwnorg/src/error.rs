@@ -1,10 +1,12 @@
+#![allow(unused)]
+
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
-    #[error("invalid file name: {0}")]
-    InvalidName(String),
+    #[error("invalid: {0}")]
+    Invalid(String),
 
-    #[error("failed to move file {0} from {1} to {2}")]
-    FileMoveFail(String, String, String),
+    #[error("{0}")]
+    FsExtra(#[from] fs_extra::error::Error),
 }
 
 pub type Result<T, E = Error> = ::std::result::Result<T, E>;
